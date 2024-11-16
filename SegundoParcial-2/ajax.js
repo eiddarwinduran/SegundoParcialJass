@@ -1,7 +1,7 @@
 function menu(abrir) {
     var contenedor = document.getElementById('menu');
-    var his=document.getElementById('historial')
-    his.innerHTML="Nombre: Laureano Pacheco Nely"+"<br>"+"CU: "
+    var pri=document.getElementById('principal')
+    pri.innerHTML="Nombre: Laureano Pacheco Nely"+"<br>"+"CU:35-4582 "
     var ajax = new XMLHttpRequest();
     ajax.open("get", abrir, true);
     ajax.onreadystatechange = function () {
@@ -118,4 +118,24 @@ function tabla(){
 	ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8");
 	ajax.send();
 }
+let currentIndex = 0;
 
+        function cargarImagen() {
+            fetch(`libro.php?index=${currentIndex}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.error) {
+                        alert(data.error);
+                    } else {
+                        document.getElementById("imagen").src = `images/${data.imagen}`;
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function siguienteImagen() {
+            currentIndex++;
+            cargarImagen();
+        }
+
+        window.onload = cargarImagen; // Cargar la primera imagen al iniciar
