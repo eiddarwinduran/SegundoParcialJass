@@ -1,0 +1,42 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#principal{
+    width: 700px;
+    height: 300px;
+    border: 1px solid blue;
+}
+.me{
+    width: 700px;
+    height: 30px;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#menu{
+    width: 90%;
+    height: 30px;
+    background-color: rgb(202, 219, 238);
+    display: flex;
+    flex-direction: row;
+}
+.bn{
+    width: 70px;
+    height: 30px;
+    background-color: red;
+}
+#historial{
+    width: 700px;
+    height: 100px;
+    border: 1px solid blue;
+    background-color: rgb(231, 175, 78);
+}
+.btn{
+    width: 40px;
+    height: 30px;
+    border-color: blue;
+    background-color: white;
+}
