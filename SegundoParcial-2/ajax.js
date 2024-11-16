@@ -11,6 +11,13 @@ function menu(abrir) {
     }
     ajax.send();
 }
+function pregunta1() { 
+    var pri=document.getElementById('principal');
+    pri.innerHTML="Nombre: Laureano Pacheco Nely"+"<br>"+"CU:35-4582 "
+    var his=document.getElementById('historial'); 
+    his.innerHTML='Presiono 1'
+	
+}
 function pregunta5() { 
 	var contenedor = document.getElementById('principal');
     var his=document.getElementById('historial'); 
@@ -101,7 +108,9 @@ function tabla(){
 
  function imagen(id) {
     
-    var contenedor=document.getElementById('principal')
+    var contenedor=document.getElementById('principal');
+    var his=document.getElementById('historial');
+    his.innerHTML='Presiono 3';
     var ajax = new XMLHttpRequest();
     ajax.open("get", 'pregunta3.php?id='+id, true);
     ajax.onreadystatechange = function () {
