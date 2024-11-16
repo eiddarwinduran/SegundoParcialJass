@@ -99,40 +99,15 @@ function tabla(){
     resul.innerHTML=tabla
  }
 
- function pregunta3() {
-	var contenedor;
-	contenedor = document.getElementById('principal');
-    var his=document.getElementById('historial');
-    his.innerHTML='Presiono 3';
-	var ajax = new XMLHttpRequest() 
-	ajax.open("get", 'imagen.html', true);
-	ajax.onreadystatechange = function () {
-		if (ajax.readyState == 4) {
-			
-			contenedor.innerHTML = ajax.responseText
-		}
-	}
-	ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8");
-	ajax.send();
+ function imagen(id) {
+    
+    var contenedor=document.getElementById('principal')
+    var ajax = new XMLHttpRequest();
+    ajax.open("get", 'pregunta3.php?id='+id, true);
+    ajax.onreadystatechange = function () {
+        if (ajax.readyState == 4) {
+            contenedor.innerHTML = ajax.responseText;
+        }
+    }
+    ajax.send();
 }
-let currentIndex = 0;
-
-        function cargarImagen() {
-            fetch(`libro.php?index=${currentIndex}`)
-                .then(response => response.json())
-                .then(data => {
-                    if (data.error) {
-                        alert(data.error);
-                    } else {
-                        document.getElementById("imagen").src = `images/${data.imagen}`;
-                    }
-                })
-                .catch(error => console.error('Error:', error));
-        }
-
-        function siguienteImagen() {
-            currentIndex++;
-            cargarImagen();
-        }
-
-        window.onload = cargarImagen; 
