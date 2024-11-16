@@ -49,7 +49,7 @@ function pregunta2(){
 function tabla(){
     // en resul hacemos referencia alo que es resultado donde vamos a cargar  la tabla de lo que pedimos
      var resul=document.getElementById('resultado')// eto es dom
-     
+     var principal=document.getElementById('principal')
        resul.innerHTML='' // para limpiar  el elemento html
      var valor=document.getElementById('valor').value;//adqirimos el valor deelemento  input  es dom y se hace lo mismo con los de abajo
      var num=document.getElementById('num').value;
@@ -75,23 +75,24 @@ function tabla(){
              
                  //aqui ala varible tabla lo concatenamos las etiquetas td y las operaciones  y el resultado lo que se muestra en el resultado
                 tabla+= '<td>'+i+'</td>'+'<td>'+operacion+'</td>'+'<td>'+valor+'</td><td>=</td>'+'<td>'+(i+parseInt(valor))+'</td>'
-
-             
-              resul.style.height="auto"
+                 principal.style.height='auto'
+                resul.style.height="auto"
               
          }
          else if(operacion=='-'){ //y por falso preguntamos si es resta y ase lo mismo  el resto solo que cambia la operacion
              tabla+= '<td>'+i+'</td>'+'<td>'+operacion+'</td>'+'<td>'+valor+'</td><td>=</td>'+'<td>'+(i-parseInt(valor))+'</td>'
-
+              principal.style.height='auto'
               resul.style.height="auto"
          }
          else if(operacion=='*'){
              tabla+= '<td>'+i+'</td>'+'<td>'+operacion+'</td>'+'<td>'+valor+'</td><td>=</td>'+'<td>'+(i*parseInt(valor))+'</td>'
               resul.style.height="auto"
+              principal.style.height='auto'
          }
          else{
              tabla+= '<td>'+i+'</td>'+'<td>'+operacion+'</td>'+'<td>'+valor+'</td><td>=</td>'+'<td>'+(i/parseInt(valor))+'</td>'
               resul.style.height="auto"
+              principal.style.height='auto'
          }
          tabla+='</td>'
      } 
@@ -100,3 +101,21 @@ function tabla(){
      tabla+='</table>' //aqui concatenamos el cierre de la tabla 
     resul.innerHTML=tabla// y esto  es donde  cargamos toda la tavla al elemento  de resultado con la tabla ya echa con la operacion que se selecciono 
  }
+
+ function pregunta3() {
+	var contenedor;
+	contenedor = document.getElementById('principal');
+    var his=document.getElementById('historial');
+    his.innerHTML='Presiono 3';
+	var ajax = new XMLHttpRequest() //crea el objetov ajax 
+	ajax.open("get", 'imagen.html', true);
+	ajax.onreadystatechange = function () {
+		if (ajax.readyState == 4) {
+			
+			contenedor.innerHTML = ajax.responseText
+		}
+	}
+	ajax.setRequestHeader("Content-Type", "text/html; charset=utf-8");
+	ajax.send();
+}
+
