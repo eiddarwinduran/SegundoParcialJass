@@ -1,0 +1,25 @@
+<form action="introducir.php" method="post" enctype="multipart/form-data">
+    <label for="" style="margin-right: 110px; margin-left:90px;">Imagen</label><label for=""
+        style="margin-right: 110px; margin-left:50px;">Titulo</label><label for=""
+        style="margin-right: 120px;">Autor</label><label for="" style="margin-right: 150px;">editorial</label><label for=""
+        style="margin-right: 200px;">Anio</label>
+        <div>
+            <input type="file" name="f1">
+                    <input type="Text" name="n1"><input type="Text" name="a<?php echo $i ?>"><input type="Text" name="c<?php echo $i ?>">
+                    <input type="radio" name="s1" value="Masculino"> Masculino
+                    <input type="radio" name="s1" value="Femenino"> Femenino
+        </div>
+        <div>
+            <input type="file" name="f2>">
+                    <input type="Text" name="n2"><input type="Text" name="a<?php echo $i ?>"><input type="Text" name="c<?php echo $i ?>">
+                    <input type="radio" name="s2" value="Masculino"> Masculino
+                    <input type="radio" name="s2" value="Femenino"> Femenino
+        </div>
+        <div>
+            <input type="file" name="f3">
+                    <input type="Text" name="n3"><input type="Text" name="a<?php echo $i ?>"><input type="Text" name="c<?php echo $i ?>">
+                    <input type="radio" name="s3" value="Masculino"> Masculino
+                    <input type="radio" name="s3" value="Femenino"> Femenino
+        </div>
+        <input type="submit" value="Insertar" style="margin-left: 20px;">
+</form>

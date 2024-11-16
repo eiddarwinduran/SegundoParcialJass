@@ -1,0 +1,24 @@
+ <!------- aqui creamos -------> 
+ <div class="cuer">
+    <div>
+      <label for="tabla">tabla del </label>
+      <input type="number" id="valor" class="n">
+    </div>
+    <div>
+      <!------- aqui creamos los inputs de tipo radio para selecionar una operacion -------> 
+        <div><input type="radio" name="operacion"  value="+"> suma
+             <input type="radio" name="operacion"  value="-"> resta</div>
+        <div>
+          <input type="radio" name="operacion"   value="*"> multiplicacion
+             <input type="radio" name="operacion"  value="/"> division
+        </div>
+    </div>
+    <div>
+  <label for="">Hasta el</label>
+  <input type="number" id="num" class="n">
+    </div>
+
+    <button id="btn" onclick="tabla()">tabla</button>
+
+  </div>
+   <div id="resultado" class="cuer"></div>
