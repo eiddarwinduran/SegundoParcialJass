@@ -1,5 +1,7 @@
 function menu(abrir) {
     var contenedor = document.getElementById('menu');
+    var his=document.getElementById('historial')
+    his.innerHTML="Nombre: Laureano Pacheco Nely"+"<br>"+"CU: "
     var ajax = new XMLHttpRequest();
     ajax.open("get", abrir, true);
     ajax.onreadystatechange = function () {
