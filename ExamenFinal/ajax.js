@@ -1,3 +1,5 @@
+
+
 function pregunta4() {
 	var contenedor;
 	contenedor = document.getElementById('principal');
@@ -35,3 +37,54 @@ function calcularRaices() {
         `; //aqui imprimimos el resultado
     }
 }
+
+
+//declaramos un vector con los colores
+const color=['#FF0000','#00FF00','#0000FF','#FFFF00','#FFA500','#800080','#FFC0CB','#A52A2A','#808080','#00FFFF','#00FF00','#4B0082','#008080','#800000','#FFD700','#C0C0C0'];
+//crea una funcio para crear la patbla 
+function creartabla(){
+    //se llama a el ide principal donde se añadira la tabla 
+    var principal = document.getElementById("principal");
+    principal.innerHTML = "";
+    //creamos una tabla con createElement
+    var tabla = document.createElement("table");
+    var cont=0;
+    //hacemos un for hata llegar a 4
+    for(let i=0;i<4;i++){
+        //creamos  un tr que es parte de la tabla 
+        var fila = document.createElement("tr");
+    for(let j=0;j<4;j++){
+        // creamos un td que contendra los colores 
+        var celda = document.createElement("td");
+        //declaramos una  variavle que optendra los valores de los colores
+        const colores=color[cont];
+        //le cambiamos el estilo alas tablas  
+        celda.style.backgroundColor=colores
+        celda.style.width='80px'
+        celda.style.height='30px'
+        cont=cont+1
+          //creamoes el evento para recuperar el valor del color donde sea aga click
+        celda.addEventListener("click", () => {
+            colorSeleccionado = colores;
+        });
+        //se añade una nueva elemento creado 
+        fila.appendChild(celda);
+    }
+    //lo mismo se añade el elementoque se crea
+    tabla.appendChild(fila);
+ }
+ //se pone todo al principal 
+ principal.appendChild(tabla);
+}
+
+//se crea un vector con los nombres de los id  y asuves se los recorre 
+["menu", "pie", "navegacion", "login"].forEach(id => {
+    // atraves de los ids se crea un evento que cuando se aga clic  cambiara el color donde isiste clic 
+    document.getElementById(id).addEventListener("click", (event) => {
+        if (colorSeleccionado) {
+            event.target.style.backgroundColor = colorSeleccionado;
+        } else {
+            alert("Selecciona un color antes de cambiar el fondo.");
+        }
+    });
+});
