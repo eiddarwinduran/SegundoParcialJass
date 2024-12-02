@@ -1,9 +1,21 @@
 
+function pregunta3() {
+	var contenedor;
+	contenedor = document.getElementById('principal');
+    contenedor.style.height="auto";
+    t=document.getElementById('menu');
+    t.style.height="auto";
+    contenedor.style.border='none'
+    
+	fetch('listar.php')
+		.then(response => response.text())
+		.then(data => contenedor.innerHTML=data);
+}
 
 function pregunta4() {
 	var contenedor;
 	contenedor = document.getElementById('principal');
-	fetch('pregunta4.html')
+	fetch('ecuacion.html')
 		.then(response => response.text())
 		.then(data => contenedor.innerHTML=data);
 }
