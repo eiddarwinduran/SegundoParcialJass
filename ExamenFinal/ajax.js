@@ -18,19 +18,13 @@ function calcularRaices() {
 
     if (discriminante > 0) { // aqui la condicionante si la discriminante es mayor a cero entra
         // Raíces reales y diferentes
-        const x1 = (-b + Math.sqrt(discriminante)) / (2 * a);//esto es una formula 
+        const x1 = (-b + Math.sqrt(discriminante)) / (2 * a);//esto es una formula "el Math.sqrt(discriminante)calcula la raiz de la sicriminante "
         const x2 = (-b - Math.sqrt(discriminante)) / (2 * a);
-        resultadoDiv.innerHTML = `
-            x1 = ${x1.toFixed(2)} <br>
-            x2 = ${x2.toFixed(2)}
-        `;
+        resultadoDiv.innerHTML = `x1 = ${x1.toFixed(2)} <br> x2 = ${x2.toFixed(2)}`; // aqui esta imprimiendo el resultado 
     } else if (discriminante === 0) {
         // Raíces reales e iguales
         const x = -b / (2 * a);
-        resultadoDiv.innerHTML = `
-        x1 = ${x.toFixed(2)} <br>
-        x2 = ${x.toFixed(2)} <br>
-        `;
+        resultadoDiv.innerHTML = `x1 = ${x.toFixed(2)} <br> x2 = ${x.toFixed(2)} <br>`;
     } else {
         // Raíces complejas
         const parteReal = (-b / (2 * a)).toFixed(2);
