@@ -25,7 +25,7 @@ function calcularRaices() {
         // Raíces reales e iguales
         const x = -b / (2 * a);
         resultadoDiv.innerHTML = `x1 = ${x} <br> x2 = ${x} <br>`;
-    } else {
+    } else { //aqui entrara cuando la discriminante sea menor a cero o sea negativo
         // Raíces complejas
         const parteReal = (-b / (2 * a)); //se calcula la parte real
         const parteImaginaria = (Math.sqrt(-discriminante) / (2 * a)); //se calcula la parte imaginaria
