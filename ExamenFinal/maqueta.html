@@ -7,37 +7,38 @@
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="ajax.js"></script>
 </head>
 
 <body>
     <div class="isquierda">
         <div class="imag"> <img src="img/escudo.png" alt=""></div>
-        <div class="preguntas">
+        <div class="preguntas" id="menu">
             <P>Inicio</P>
             <P>pregunta1</P>
             <P>pregunta2</P>
             <P>pregunta3</P>
-            <P>pregunta4</P>
+            <P><a style="color: white;text-decoration: none;" href="javascript:pregunta4()">Pregunta4</a></P>
         </div>
     </div>
     <div class="derecha">
-        <div class="menu">
+        <div class="menu" id="navegacion">
             <div class="inicio2">
                 <P>Inicio</P>
                 <P>Pregunta1</P>
                 <P>Pregunta2</P>
                 <P>Pregunta3</P>
-                <P>Pregunta4</P>
+                <P><a style="color: rgba(73, 78, 78, 0.637);text-decoration: none;" href="javascript:pregunta4()">Pregunta4</a></P>
             </div>
             <div class="iniciar"><button>Iniciar Sesion</button></div>
         </div>
-        <div class="centro">
+        <div class="centro" id="principal">
             <div style="font-size: 30px;">Sis 256 Programacion Web</div>
             <div>Examen Final</div>
             <img src="img/ff534b37-fb55-4399-9507-9c7511f36086.jpeg" alt="">
             <div style="font-size: 20px; font-weight: bold;">Nely Norma Laureano Pacheco</div>
         <div>Ingenieria Sistema</div> <br>
-        <span>Repositorio: <button>haga clik aqui</button></span> <br>
+        <span>Repositorio: <button onclick="window.location='https://github.com/Nely-Laureano/DesarrolloWebNNLP'">haga clickaqui</button></span> <br>
       
         </div>
 
@@ -79,7 +80,7 @@
             </div>
             
         </div>
-        <div class="pie">
+        <div class="pie" id="pie">
             <div>c Examen Final Tecnologia y DesarrolloWeb</div>
             <div class="redes"> <p>Facebook</p> <p>Twitter</p> <p>Linkedln</p></div>
         </div>
