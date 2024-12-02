@@ -13,7 +13,6 @@ body{
 
 }
 .derecha{
-    
     display: flex;
     flex-direction: column;
     width: 92%;
@@ -53,7 +52,7 @@ margin-left: 13px;
     flex-direction: column;
     align-items: center;
     border-bottom: 1px solid;
-    
+    height: 325px;
 }
 .centro img{
     border-radius: 50%;
