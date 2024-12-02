@@ -80,11 +80,11 @@ function creartabla(){
 //se crea un vector con los nombres de los id  y asuves se los recorre 
 ["menu", "pie", "navegacion", "login"].forEach(id => {
     // atraves de los ids se crea un evento que cuando se aga clic  cambiara el color donde isiste clic 
-    document.getElementById(id).addEventListener("click", (event) => {
-        if (colorSeleccionado) {
-            event.target.style.backgroundColor = colorSeleccionado;
-        } else {
-            alert("Selecciona un color antes de cambiar el fondo.");
+    document.getElementById(id).addEventListener("click", (event)=>{
+        if(colorSeleccionado){
+            event.target.style.backgroundColor=colorSeleccionado;
+        }else{
+            alert("Selecciona un color antes de cambiar el fondo")
         }
-    });
+    })
 });

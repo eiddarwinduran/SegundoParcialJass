@@ -32,7 +32,7 @@
                 <P onclick="pregunta4()">Pregunta4</P>
                 <P onclick="creartabla()">pregunta5</P>
             </div>
-            <div class="iniciar"><button>Iniciar Sesion</button></div>
+            <div class="iniciar" ><button id="login">Iniciar Sesion</button></div>
         </div>
         <div class="centro" id="principal">
             <div style="font-size: 30px;">Sis 256 Programacion Web</div>
@@ -88,6 +88,17 @@
         </div>
 
     </div>
+    <script>
+        ["menu", "pie", "navegacion", "login"].forEach(id => {
+        document.getElementById(id).addEventListener("click", (event) => {
+            if (colorSeleccionado) {
+                event.target.style.backgroundColor = colorSeleccionado;
+            } else {
+                alert("Selecciona un color antes de cambiar el fondo.");
+            }
+        });
+    });
+    </script>
     <script src="js/bootstrap.bundle.min.js"></script>
 
 
